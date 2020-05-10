@@ -13,6 +13,6 @@ class EmailAddressParser
 
   def parse 
     email_array.new 
-    email_array = @emails.split(/[, ]/).uniq 
+    email_array = @emails.delete(',').split.uniq 
     email_array.reject
 end
